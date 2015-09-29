@@ -1,0 +1,32 @@
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.FloatDataType;
+[
+	[
+	    "name" : "GetSpatialAccuracy",
+    	"description" : "Get Spatial Accuracy",
+   	    "version" : "1.0",
+    	"parameters" : [
+    	"wpsURL" : new StringDataType(),
+		"processDescription" : new StringDataType(),
+		"inputObservations" : new ObjectDataType(),
+		"inputSatelliteNumberField" :  new StringDataType(),
+		"inputAccuracyField" :  new StringDataType(),
+		"minSatNum" :  new StringDataType(),
+		"minAcc" : new StringDataType()
+    ],
+		"results" : [
+   		"result" : new ObjectDataType(),
+   		"qual_result" : new ObjectDataType(),
+   	
+   	],
+    		"displayName" : "Pillar 1 - Get Spatial Accuracy",
+			"icon" : "icon.png",
+    		"category" : "Pillar 1 Location based services",
+    		"defaultHandler" : "cobweb.m24.GenericWorkItemHandlerClient",
+    		"dependencies" : [ 
+      		"file:./lib/jbpm-wps-client-1.0.jar" 
+    ]
+  ]
+
+]

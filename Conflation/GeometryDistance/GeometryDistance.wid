@@ -1,0 +1,27 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+
+[
+[
+    "name" : "GeometryDistance",
+    "description" : "Conflate datasets on distance",
+    "version" : "1.0",
+    "parameters" : [
+    "wpsURL" : new StringDataType(),
+"processDescription" : new StringDataType(),
+"IN_TARGET" : new ObjectDataType(),
+"IN_REFERENCE" :  new ObjectDataType(),
+"IN_THRESHOLD" :  new StringDataType(),
+    ],
+"results" : [
+   	"OUT_REFERENCE" : new ObjectDataType(),
+   	],
+    "displayName" : "Conflate Datasets on Distance",
+    "icon" : "icon.png",
+    "category" : "Conflation",
+    "defaultHandler" : "cobweb.m24.GenericWorkItemHandlerClient",
+    "dependencies" : [ 
+    "file:./lib/jbpm-wps-client-1.0.jar", 
+    ]
+  ]
+]

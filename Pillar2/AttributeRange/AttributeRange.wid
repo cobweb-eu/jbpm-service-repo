@@ -1,0 +1,31 @@
+
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+[
+
+[
+    "name" : "AttributeRange",
+    "description" : "Attribute Range Check",
+    "version" : "1.0",
+    "parameters" : [
+    "wpsURL" : new StringDataType(),
+"processDescription" : new StringDataType(),
+"inputObservations" : new ObjectDataType(),
+"attributeRange" :  new StringDataType(),
+"maxRange" :  new StringDataType(),
+"minRange" :  new StringDataType(),
+    ],
+"results" : [
+   	"result" : new ObjectDataType(),
+   	"qual_result" : new ObjectDataType(),
+   
+   	],
+    "displayName" : "Pillar 2 - Attribute Range Check",
+    "icon" : "icon.png",
+    "category" : "Pillar 2",
+    "defaultHandler" : "cobweb.m24.GenericWorkItemHandlerClient",
+    "dependencies" : [ 
+    "file:./lib/jbpm-wps-client-1.0.jar", 
+    ]
+ ]
+ ]

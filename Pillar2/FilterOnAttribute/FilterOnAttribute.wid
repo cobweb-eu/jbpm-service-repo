@@ -1,0 +1,31 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+
+[
+
+[
+    "name" : "FilterOnAttribute",
+    "description" : "Filter on Attribute",
+    "version" : "1.0",
+    "parameters" : [
+    "wpsURL" : new StringDataType(),
+"processDescription" : new StringDataType(),
+"inputObservations" : new ObjectDataType(),
+"fieldName" :  new StringDataType(),
+"featureName" :  new StringDataType(),
+"include" :  new StringDataType(),
+    ],
+"results" : [
+   	"result" : new ObjectDataType(),
+   	"qual_result" : new ObjectDataType(),
+   
+   	],
+    "displayName" : "Pillar 2 - Filter on Attribute",
+    "icon" : "icon.png",
+    "category" : "Pillar 2",
+    "defaultHandler" : "cobweb.m24.GenericWorkItemHandlerClient",
+    "dependencies" : [ 
+      "file:./lib/jbpm-wps-client-1.0.jar", 
+    ]
+  ]
+  ]

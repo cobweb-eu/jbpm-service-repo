@@ -1,0 +1,31 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+
+[
+	[
+	"name" : "NumberOfNeighbourSimilarFeatures",
+    "description" : "Number of neighbourhood features give by field",
+    "version" : "1.0",
+    "parameters" : [
+    "wpsURL" : new StringDataType(),
+	"processDescription" : new StringDataType(),	
+	"inputObservations" : new ObjectDataType(),
+	"inputAuthoritativeData" :  new ObjectDataType(),
+	"inputDistance" :  new StringDataType(),
+	"minNumber" :  new StringDataType(),
+	"fieldName" :  new StringDataType(),
+    ],
+		"results" : [
+   		"result" : new ObjectDataType(),
+   		"qual_result" : new ObjectDataType(),
+   
+   	],
+    	"displayName" : "Pillar 4 - Number of neighbourhood features by field",
+    	"icon" : "icon.png",
+    	"category" : "Pillar 4",
+    	"defaultHandler" : "cobweb.m24.GenericWorkItemHandlerClient",
+    	"dependencies" : [ 
+    		"file:./lib/jbpm-wps-client-1.0.jar", 
+    ]
+  ]
+  ]

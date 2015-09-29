@@ -1,0 +1,16 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+
+[
+  [
+	"name" : "StoreWFSNamedOutput",
+   	"parameters" : [
+	"wpsURL" : new StringDataType(),
+	"processDescription" : new StringDataType(),
+	"inputObservations" : new ObjectDataType(),
+	"fileName" : new StringDataType(),
+   	],
+ 	"icon" : "icon.png",
+    "displayName" : "Store In Geoserver with name"
+]
+]

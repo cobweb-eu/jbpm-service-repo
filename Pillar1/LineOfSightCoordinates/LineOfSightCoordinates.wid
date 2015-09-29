@@ -1,0 +1,32 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+
+[
+
+    [
+    "name" : "LineOfSightCoordinates",
+    "description" : "Calculate line of sight coordinates",
+    "version" : "1.0",
+    "parameters" : [
+    	"wpsURL" : new StringDataType(),
+	"processDescription" : new StringDataType(),
+	"inputObservations" : new ObjectDataType(),	
+	"inputSurfaceModel" :  new ObjectDataType(),
+	"inputBaringFieldName" :  new StringDataType(),
+	"inputTiltFieldName" :  new StringDataType(),
+	"inputUserHeight" : new StringDataType()
+    ],
+	"results" : [
+   	"result" : new ObjectDataType(),
+   	"qual_result" : new ObjectDataType()
+   
+   	],
+    "displayName" : "Pillar 1 - Line of Sight Coordinates",
+    "icon" : "icon.png",
+    "category" : "Pillar 1",
+    "defaultHandler" : "cobweb.m24.GenericWorkItemHandlerClient",
+    "dependencies" : [ 
+    "file:./lib/jbpm-wps-client-1.0.jar", 
+    ]
+  ]
+]

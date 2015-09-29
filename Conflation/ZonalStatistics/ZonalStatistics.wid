@@ -1,0 +1,27 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+import org.drools.core.process.core.datatype.impl.type.ObjectDataType;
+
+[
+[
+    "name" : "ZonalStats",
+    "description" : "Create zonal statistics",
+    "version" : "1.0",
+    "parameters" : [
+    "wpsURL" : new StringDataType(),
+"processDescription" : new StringDataType(),
+"IN_TARGET" : new ObjectDataType(),
+"IN_REFERENCE" :  new ObjectDataType(),
+"IN_BAND" :  new StringDataType(),
+    ],
+"results" : [
+   	"OUT_REFERENCE" : new ObjectDataType(),
+   	],
+    "displayName" : "Create Zonal Statistics",
+    "icon" : "icon.png",
+    "category" : "Conflation",
+    "defaultHandler" : "cobweb.m24.GenericWorkItemHandlerClient",
+    "dependencies" : [ 
+    "file:./lib/jbpm-wps-client-1.0.jar", 
+    ]
+  ],
+]
